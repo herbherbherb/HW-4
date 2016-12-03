@@ -2,7 +2,7 @@ import numpy as np
 from copy import copy, deepcopy
 import time, random
 from collections import defaultdict as setdefault
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 def main():
 #=======initialize================
@@ -42,8 +42,9 @@ def main():
 			loc = (row, col)
 			if loc not in dic:
 				dic[loc] = np.random.uniform(low=-1.0, high=1.0, size=(10,))
+				# dic[loc] = np.zeros(10)
 	
-	epoch = 1
+	epoch = 3
 	learning_rate = 1000/(1000 + epoch)
 	for times in range(epoch):
 		training(content_training, traininglabels, dic, learning_rate)
